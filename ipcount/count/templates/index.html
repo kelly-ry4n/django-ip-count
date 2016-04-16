@@ -5,8 +5,11 @@
     <title></title>
 </head>
 <body>
-    Hello {{ ip_addr }} !
+    Hello {{ ip_addr }} ! <br/>
 
-    You've visited {{ num_visits }}.
+    You've visited {{ visitor.count }} times. <br/>
+
+    Your last visit was on {{ visitor.last_visit }}
+
 </body>
 </html>

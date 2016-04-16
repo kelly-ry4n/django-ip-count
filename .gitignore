@@ -5,6 +5,11 @@ __pycache__/
 
 # C extensions
 *.so
+i
+
+#vim swap files
+*.swp
+*.swo
 
 # Distribution / packaging
 .Python
