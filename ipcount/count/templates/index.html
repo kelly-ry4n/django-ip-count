@@ -1,15 +1,63 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "count/stylesheets/screen.css" %}">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-    Hello {{ ip_addr }} ! <br/>
+    
+    <div id="root">
+        <div id="wrapper">
 
-    You've visited {{ visitor.count }} times. <br/>
+            <div id="center-col outline">
 
-    Your last visit was on {{ visitor.last_visit }}
+                <h1>
+                    This website tracks visits from IP addresses
+                </h1>
+
+                <div class="col-1 outline">
+                    <div class="info-text">
+                        Your IP Address
+                    </div>
+                    <div class="data-text">
+                        {{ ip_addr }} 
+                    </div>
+                </div>
+                <div class="col-2 outline">
+
+                    <div class="info-text">
+                        You've visited 
+                    </div>
+                    <div class="data-text">
+                        {{ visitor.count }}
+                    </div>
+                    <div class="info-text">
+                        times
+                    </div>
+                </div>
+                <div class="col-3 outline">
+                    <div class="info-text">
+                        Your last visit was on 
+                    </div>
+                    <div class="data-text">
+                        {{ visitor.last_visit }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        Copyright Kelly Ryan, 2016
+
+    </div>
 
 </body>
 </html>
