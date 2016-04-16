@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'count',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,7 +52,10 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'ipcount.urls'
-
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
