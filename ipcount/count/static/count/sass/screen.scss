@@ -16,6 +16,11 @@ $col-medium: #41CBCC;
 
 @include sticky-footer(54px);
 
+#footer {
+    background-color: $col-light;
+    padding-top: 10px;
+}
+
 html body {
     height: 100%;
     margin: 0;
@@ -31,6 +36,9 @@ body {
 h1 {
     padding: 32px;
     font-family: Impact, Charcoal, sans-serif;
+    font-size: 55px;
+    font-variant: small-caps;
+    
 }
 
 #root {
@@ -56,6 +64,7 @@ h1 {
 }
 
 [class*='col-'] {
+    vertical-align: middle;
     float: center;
     overflow: hidden;
     min-height: 1px;
@@ -66,9 +75,13 @@ h1 {
     background-color: $col-bright;
     width: 160px;
     border: 10px solid $col-dark;
+    margin-bottom: 100px;
 }
 
 .info-text {
+    margin: 25px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: $col-dark;
 }
 .data-text {
     margin: 20px;
